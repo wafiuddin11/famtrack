@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FamTrack</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .status-container {
+            margin-top: 20px;
+        }
+        .member {
+            margin: 10px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        select {
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>FamTrack</h1>
+    <p>by Wafi</p>
+    
+    <div class="status-container">
+        <h2>Update Your Status:</h2>
+        <div class="member">
+            <label for="wafi-status">Wafi: </label>
+            <select id="wafi-status">
+                <option value="Sleeping">Sleeping</option>
+                <option value="Eating">Eating</option>
+                <option value="Working">Working</option>
+                <option value="Relaxing">Relaxing</option>
+            </select>
+            <button onclick="setStatus('Wafi')">Set Status</button>
+        </div>
+        <div class="member">
+            <label for="jack-status">Jack: </label>
+            <select id="jack-status">
+                <option value="Sleeping">Sleeping</option>
+                <option value="Eating">Eating</option>
+                <option value="Working">Working</option>
+                <option value="Relaxing">Relaxing</option>
+            </select>
+            <button onclick="setStatus('Jack')">Set Status</button>
+        </div>
+        <div class="member">
+            <label for="dad-status">Dad: </label>
+            <select id="dad-status">
+                <option value="Sleeping">Sleeping</option>
+                <option value="Eating">Eating</option>
+                <option value="Working">Working</option>
+                <option value="Relaxing">Relaxing</option>
+            </select>
+            <button onclick="setStatus('Dad')">Set Status</button>
+        </div>
+        <div class="member">
+            <label for="mom-status">Mom: </label>
+            <select id="mom-status">
+                <option value="Sleeping">Sleeping</option>
+                <option value="Eating">Eating</option>
+                <option value="Working">Working</option>
+                <option value="Relaxing">Relaxing</option>
+            </select>
+            <button onclick="setStatus('Mom')">Set Status</button>
+        </div>
+        <div class="member">
+            <label for="easy-status">Easy the Cat: </label>
+            <select id="easy-status">
+                <option value="Eating">Eating</option>
+                <option value="Sleeping">Sleeping</option>
+                <option value="Toilet">Toilet</option>
+            </select>
+            <button onclick="setStatus('Easy the Cat')">Set Status</button>
+        </div>
+    </div>
+    
+    <script>
+        function setStatus(name) {
+            alert(name + " status updated to " + document.getElementById(name.toLowerCase().replace(/ /g, "-") + "-status").value);
+        }
+    </script>
+</body>
+</html>
